@@ -1,0 +1,33 @@
+---
+layout: page
+title: Todos os episódios
+episode-image: "https://picsum.photos/1000/1000?random=20"
+---
+
+<ul class="list-unstyled">
+    {% for post in site.posts limit: 5 %}
+    <li>
+
+        <div class="d-block d-md-flex podcast-entry bg-white mb-5">
+            <div class="image img-fluid" style="background-image: url('{{post.episode-image}}.jpg');"></div>
+            <div class="text">
+
+                <h3 class="font-weight-light"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <div class="text-white mb-3"><span
+                        class="text-black-opacity-05"><small>{{ post.date | date: '%d/ %m/ %Y' }}</small></span>
+                </div>
+                <p class="mb-4">{% if post.excerpt %}
+                    {{ post.excerpt }}
+                    {% endif %}</p>
+
+                <div class="player">
+                    <audio controls style="width: 100%;">
+                        <source src="{{post.episode-file}}" type="audio/mp3">
+                    </audio>
+                </div>
+
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

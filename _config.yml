@@ -1,0 +1,18 @@
+title: Disaine BR
+email: disainebr@yahoo.com
+description: Plataforma para discutir, comentar e fomentar conhecimentos e temas acerca do Design de forma geral.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter_username: disainebr
+github_username: disainebr
+
+permalink:  /:categories/:title.html
+
+sass:
+  style: compressed
+
+theme: minima
+plugins:
+  - jekyll-feed

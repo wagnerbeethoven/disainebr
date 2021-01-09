@@ -1,0 +1,15 @@
+<nav class="navbar fixed-top navbar-light container">
+    <a href="{{site.url}}" class="text-white h2">
+        <img height="45px" src="{{site.url}}/img/logo.svg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav text-right mr-auto">
+            {%include menu.html %}
+        </ul>
+
+    </div>
+</nav>
